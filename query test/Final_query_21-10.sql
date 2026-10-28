@@ -38,7 +38,19 @@ CREATE OR REPLACE VIEW vw_programa_beneficio AS (
 	INNER JOIN cte_incidentes inc
 	    ON crm.nr_solicitacao_servico = inc.nr_incidente
 	WHERE inc.ts_fechamento BETWEEN DATE '2026-06-30' AND inc.data_final
+		AND ts_chamado > '2025-12-30'
+	ORDER BY data_abertura, lead_day
 );
 
-SELECT * FROM vw_programa_beneficio
-WHERE nr_bem = '7417161480040';
+SELECT 
+	nr_bem,
+	cd_tarefa,
+	nm_tecnico,
+	nm_status_tarefa,
+	nr_incidente,
+	data_abertura,
+	data_fechamento::date,
+	data_final,
+	lead_day::date
+FROM vw_programa_beneficio
+WHERE nr_bem = '7417161481567';		
