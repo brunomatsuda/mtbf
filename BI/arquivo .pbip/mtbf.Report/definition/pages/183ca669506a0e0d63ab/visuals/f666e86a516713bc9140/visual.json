@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "f666e86a516713bc9140",
+  "position": {
+    "x": 1169.7232953180164,
+    "y": 181.70458956396371,
+    "z": 11000,
+    "height": 117.5,
+    "width": 202.5,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela Medidas"
+                    }
+                  },
+                  "Property": "Qtd Tecnico"
+                }
+              },
+              "queryRef": "Tabela Medidas.Qtd Tecnico",
+              "nativeQueryRef": "Qtd Tecnico"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Tabela Medidas"
+                  }
+                },
+                "Property": "Qtd Tecnico"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

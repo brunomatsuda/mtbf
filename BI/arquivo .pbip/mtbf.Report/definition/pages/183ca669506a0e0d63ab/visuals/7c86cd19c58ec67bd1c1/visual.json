@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "7c86cd19c58ec67bd1c1",
+  "position": {
+    "x": 372.4944086061256,
+    "y": 179.43328219441418,
+    "z": 2000,
+    "height": 117.5,
+    "width": 317.5,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela Medidas"
+                    }
+                  },
+                  "Property": "% Atendimentos Técnico por Bem"
+                }
+              },
+              "queryRef": "Tabela Medidas.media_tecnico",
+              "nativeQueryRef": "% Atendimentos Técnico por Bem"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Tabela Medidas"
+                  }
+                },
+                "Property": "% Atendimentos Técnico por Bem"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

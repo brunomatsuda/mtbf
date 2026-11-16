@@ -1,0 +1,312 @@
+table 'public vw_programa_beneficio'
+	lineageTag: b86e5c12-9f69-4ed9-813c-14471da15df1
+
+	column nr_incidente
+		dataType: int64
+		formatString: 0
+		lineageTag: 997f0de2-68bb-440f-beb8-64186ca8f2a6
+		summarizeBy: sum
+		sourceColumn: nr_incidente
+
+		annotation SummarizationSetBy = Automatic
+
+	column cd_tarefa
+		dataType: int64
+		formatString: 0
+		lineageTag: 8cf93a82-b246-4596-90ee-e9a406f1dadd
+		summarizeBy: sum
+		sourceColumn: cd_tarefa
+
+		annotation SummarizationSetBy = Automatic
+
+	column nr_tarefa
+		dataType: int64
+		formatString: 0
+		lineageTag: df550ce4-9abd-4432-9a99-614d0a1eac7a
+		summarizeBy: sum
+		sourceColumn: nr_tarefa
+
+		annotation SummarizationSetBy = Automatic
+
+	column nr_os
+		dataType: string
+		lineageTag: 9e53f8b0-4f49-4ea0-9c4a-d41b5b0b8c77
+		summarizeBy: none
+		sourceColumn: nr_os
+
+		annotation SummarizationSetBy = Automatic
+
+	column nr_bem
+		dataType: string
+		lineageTag: d59a0083-409c-43f2-96b6-81574b3ffde6
+		summarizeBy: none
+		sourceColumn: nr_bem
+
+		annotation SummarizationSetBy = Automatic
+
+	column ds_bem
+		dataType: string
+		lineageTag: 583fe5f3-5917-4c4c-aae2-01cced607b9e
+		summarizeBy: none
+		sourceColumn: ds_bem
+
+		annotation SummarizationSetBy = Automatic
+
+	column ds_tipo_equipamento
+		dataType: string
+		lineageTag: 423c52f4-aa4b-43ec-948b-e6c8c9a37fa7
+		summarizeBy: none
+		sourceColumn: ds_tipo_equipamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column ds_defeito
+		dataType: string
+		lineageTag: ed9eaab0-0d1f-449f-82d2-4ad4c9183688
+		summarizeBy: none
+		sourceColumn: ds_defeito
+
+		annotation SummarizationSetBy = Automatic
+
+	column tp_atendimento
+		dataType: string
+		lineageTag: 870382a3-a377-4adf-883a-c4aff01c0146
+		summarizeBy: none
+		sourceColumn: tp_atendimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column nr_criticidade
+		dataType: string
+		lineageTag: 81cb6050-e0ab-451f-92e2-464dc955dc20
+		summarizeBy: none
+		sourceColumn: nr_criticidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column ds_status
+		dataType: string
+		lineageTag: 087522e3-3d50-4d32-adf0-a6059af10502
+		summarizeBy: none
+		sourceColumn: ds_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column nr_solicitacao_servico
+		dataType: int64
+		formatString: 0
+		lineageTag: 57f37180-dfb3-4aec-b48a-7ac4b5db670f
+		summarizeBy: sum
+		sourceColumn: nr_solicitacao_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column nm_tecnico
+		dataType: string
+		lineageTag: 32796775-f4f0-4c0e-affc-5e7cfd3298ea
+		summarizeBy: none
+		sourceColumn: nm_tecnico
+
+		annotation SummarizationSetBy = Automatic
+
+	column nr_matricula
+		dataType: int64
+		formatString: 0
+		lineageTag: c10a02e1-030b-43bc-9602-e5d75763c3c8
+		summarizeBy: sum
+		sourceColumn: nr_matricula
+
+		annotation SummarizationSetBy = Automatic
+
+	column nm_status_tarefa
+		dataType: string
+		lineageTag: e3fe3ea6-1516-441b-b3f0-a968239df466
+		summarizeBy: none
+		sourceColumn: nm_status_tarefa
+
+		annotation SummarizationSetBy = Automatic
+
+	column cd_solucao
+		dataType: int64
+		formatString: 0
+		lineageTag: 5bfe5089-b703-4002-925a-40931b90d997
+		summarizeBy: sum
+		sourceColumn: cd_solucao
+
+		annotation SummarizationSetBy = Automatic
+
+	column ds_solucao
+		dataType: string
+		lineageTag: b5977778-970d-49a3-8dac-4719eef59fdf
+		summarizeBy: none
+		sourceColumn: ds_solucao
+
+		annotation SummarizationSetBy = Automatic
+
+	column ds_observacao_solucao
+		dataType: string
+		lineageTag: bdab897b-93bd-42b2-a8ea-4019371d9edc
+		summarizeBy: none
+		sourceColumn: ds_observacao_solucao
+
+		annotation SummarizationSetBy = Automatic
+
+	column ds_fornecedor
+		dataType: string
+		lineageTag: 9e340af6-9d8d-4049-b5c0-49c34da2d4d5
+		summarizeBy: none
+		sourceColumn: ds_fornecedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column nm_cidade
+		dataType: string
+		lineageTag: 7edec099-f98b-4f48-9ed7-0c307d9740b3
+		summarizeBy: none
+		sourceColumn: nm_cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column sg_uf
+		dataType: string
+		lineageTag: 7250b60b-0e8a-4c85-a972-c247ef0dc9ac
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: sg_uf
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_abertura
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 9eb08747-0b49-4c40-816f-6d6ac73e1553
+		summarizeBy: none
+		sourceColumn: data_abertura
+
+		variation Variação
+			isDefault
+			relationship: cf063c6f-1a41-4a54-ac58-3c379e4ea370
+			defaultHierarchy: LocalDateTable_eaa3b4bb-66cd-48ba-873a-28f2917f00a3.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_fechamento
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: c7943055-32ea-45ac-989f-a53ce47d5028
+		summarizeBy: none
+		sourceColumn: data_fechamento
+
+		variation Variação
+			isDefault
+			relationship: c1a9801b-3553-4efd-bd39-053b166db37c
+			defaultHierarchy: LocalDateTable_b99de2f5-3dcf-435b-8e89-92f1de1feb37.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_final
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: fe2bad46-cd5c-4764-b5c4-4d8eee082621
+		summarizeBy: none
+		sourceColumn: data_final
+
+		variation Variação
+			isDefault
+			relationship: c5f034e9-1c4a-4a5f-ab6b-6cef56dfe34d
+			defaultHierarchy: LocalDateTable_dd0cec7c-013a-4e69-a150-633fd874e1f7.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column estado
+		dataType: string
+		lineageTag: 90da9f5a-8b10-4d01-a327-8ed583f03fa0
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column lag_day
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: c4fc47a8-91a1-4776-8e2c-725ee61f9c69
+		summarizeBy: none
+		sourceColumn: lag_day
+
+		variation Variação
+			isDefault
+			relationship: cd5dfee4-5e34-4625-9ff8-baac0e0d9334
+			defaultHierarchy: LocalDateTable_7cd16992-5f32-4fcc-a239-38e2a6d6b5af.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column diff_days
+		dataType: int64
+		formatString: 0 "dias"
+		lineageTag: 07f24aea-4be4-4636-9ccd-e99cc2beb0a4
+		summarizeBy: sum
+		sourceColumn: diff_days
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column cd_defeito
+		dataType: string
+		lineageTag: d97c8f18-ca29-4498-b04c-a00b4dfcb0d4
+		summarizeBy: none
+		sourceColumn: cd_defeito
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public vw_programa_beneficio' = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("10.58.5.16", "ANS"),
+				    public_vw_programa_beneficio = Fonte{[Schema="public",Item="vw_programa_beneficio"]}[Data],
+				    #"Personalização Adicionada" = Table.AddColumn(
+				    public_vw_programa_beneficio,
+				    "estado",
+				    each
+				        if [sg_uf] = "AC" then "Acre"
+				        else if [sg_uf] = "AL" then "Alagoas"
+				        else if [sg_uf] = "AP" then "Amapá"
+				        else if [sg_uf] = "AM" then "Amazonas"
+				        else if [sg_uf] = "BA" then "Bahia"
+				        else if [sg_uf] = "CE" then "Ceará"
+				        else if [sg_uf] = "DF" then "Distrito Federal"
+				        else if [sg_uf] = "ES" then "Espírito Santo"
+				        else if [sg_uf] = "GO" then "Goiás"
+				        else if [sg_uf] = "MA" then "Maranhão"
+				        else if [sg_uf] = "MT" then "Mato Grosso"
+				        else if [sg_uf] = "MS" then "Mato Grosso do Sul"
+				        else if [sg_uf] = "MG" then "Minas Gerais"
+				        else if [sg_uf] = "PA" then "Pará"
+				        else if [sg_uf] = "PB" then "Paraíba"
+				        else if [sg_uf] = "PR" then "Paraná"
+				        else if [sg_uf] = "PE" then "Pernambuco"
+				        else if [sg_uf] = "PI" then "Piauí"
+				        else if [sg_uf] = "RJ" then "Rio de Janeiro"
+				        else if [sg_uf] = "RN" then "Rio Grande do Norte"
+				        else if [sg_uf] = "RS" then "Rio Grande do Sul"
+				        else if [sg_uf] = "RO" then "Rondônia"
+				        else if [sg_uf] = "RR" then "Roraima"
+				        else if [sg_uf] = "SC" then "Santa Catarina"
+				        else if [sg_uf] = "SP" then "São Paulo"
+				        else if [sg_uf] = "SE" then "Sergipe"
+				        else if [sg_uf] = "TO" then "Tocantins"
+				        else null
+				),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Personalização Adicionada","Concluído com Pendência","Pendência",Replacer.ReplaceText,{"nm_status_tarefa"})
+				in
+				    #"Valor Substituído"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Exception
+

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "4d359b82e617b0061b01",
+  "position": {
+    "x": 856.282878320179,
+    "y": 24.98438106504501,
+    "z": 13000,
+    "height": 124.92190532522505,
+    "width": 313.44041699783742,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "textFilter25A4896A83E0487089E2B90C9AE57C8A",
+    "query": {
+      "queryState": {
+        "field": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "public vw_programa_beneficio"
+                    }
+                  },
+                  "Property": "nm_tecnico"
+                }
+              },
+              "queryRef": "public vw_programa_beneficio.nm_tecnico",
+              "nativeQueryRef": "nm_tecnico"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "28e5bba9ed068553bbec",
+  "position": {
+    "x": 704.10528456035934,
+    "y": 181.70458956396371,
+    "z": 9000,
+    "height": 117.5,
+    "width": 212.5,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela Medidas"
+                    }
+                  },
+                  "Property": "Medida"
+                }
+              },
+              "queryRef": "Tabela Medidas.Medida",
+              "nativeQueryRef": "atendimento / tecnico",
+              "displayName": "atendimento / tecnico"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Tabela Medidas"
+                  }
+                },
+                "Property": "Medida"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

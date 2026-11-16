@@ -1,0 +1,29 @@
+table atualizacao
+	lineageTag: 22cfebd5-41bd-46f6-adf7-f45e42ffe833
+
+	column atualizacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2180a2ac-b79f-4fb3-9e50-b0e0708a7296
+		summarizeBy: none
+		sourceColumn: atualizacao
+
+		variation Variação
+			isDefault
+			relationship: 43d2a27e-26d3-4306-aa1d-6c6cdfe9cd2f
+			defaultHierarchy: LocalDateTable_df1c6792-ffdd-4192-b199-98546c5f8971.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition atualizacao = m
+		mode: import
+		source =
+				let
+				    Fonte = DateTime.LocalNow()
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = DateTime
+

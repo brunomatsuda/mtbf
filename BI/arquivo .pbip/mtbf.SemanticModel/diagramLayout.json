@@ -1,0 +1,72 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 298,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 838,
+            "y": 98.71875
+          },
+          "nodeIndex": "public vw_programa_beneficio",
+          "nodeLineageTag": "b86e5c12-9f69-4ed9-813c-14471da15df1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 284,
+            "y": 129.21875
+          },
+          "nodeIndex": "Tabela Medidas",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 838,
+            "y": 119.46875
+          },
+          "nodeIndex": "filtro_calendario",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 838,
+            "y": 130.90625
+          },
+          "nodeIndex": "atualizacao",
+          "nodeLineageTag": "22cfebd5-41bd-46f6-adf7-f45e42ffe833",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

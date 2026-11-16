@@ -1,0 +1,28 @@
+table filtro_calendario
+	lineageTag: 1d563a58-748d-4b8d-b33d-437e60fc87bf
+
+	column Date
+		formatString: General Date
+		lineageTag: e9617375-74e9-4c90-975c-a879fa9e5767
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variação
+			isDefault
+			relationship: 520b5cdc-381e-4f23-8b8a-ca12e490a49d
+			defaultHierarchy: LocalDateTable_75b5430f-0637-42c9-88cd-19b37d24d5df.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition filtro_calendario = calculated
+		mode: import
+		source =
+				
+				CALENDAR(
+				    MIN('public vw_programa_beneficio'[data_fechamento]),
+				    MAX('public vw_programa_beneficio'[data_final])
+				)
+
+	annotation PBI_Id = 4470a20b7f4c403eb4ab84395b88bb72
+

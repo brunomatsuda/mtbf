@@ -1,0 +1,307 @@
+table 'Tabela Medidas'
+	lineageTag: 4aed4617-11d5-45ea-b0a1-f77521effba4
+
+	measure '% Atendimentos Técnico por Bem' =
+			
+			VAR TotalAtendimentosBem =
+			    CALCULATE (
+			        [Qtd Tecnico],
+			        ALLEXCEPT (
+			            'public vw_programa_beneficio',
+			            'public vw_programa_beneficio'[nr_bem]
+			        )
+			    )
+			RETURN
+			    DIVIDE ( [Qtd Tecnico], TotalAtendimentosBem )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: d0a1f898-9024-4504-9bf1-4a039cd31be0
+
+	measure 'Qtd Tecnico' = DISTINCTCOUNT('public vw_programa_beneficio'[nm_tecnico])
+		formatString: 0
+		lineageTag: eeebfabe-706d-48b0-b4f9-60ee76d54a5e
+
+	measure qtd_atendimento_bem =
+			CALCULATE(
+			    COUNT('public vw_programa_beneficio'[nm_tecnico]),
+			        ALLEXCEPT('public vw_programa_beneficio', 'public vw_programa_beneficio'[nr_bem])
+			)
+		formatString: 0
+		lineageTag: 2d056c12-5494-4767-9ec4-06f44738ae70
+
+	measure 'Qtd Reincidências Técnico-Bem' =
+			
+			VAR QtAtendimentosTecnicoBem =
+			    COUNT ( 'public vw_programa_beneficio'[nr_incidente] )
+			RETURN
+			    IF ( QtAtendimentosTecnicoBem >= 1,
+			         QtAtendimentosTecnicoBem - 1,
+			         0
+			    )
+		formatString: 0
+		lineageTag: 7300bd58-cd07-47c4-b172-aac8068f2111
+
+	measure Medida = DIVIDE([qtd_atendimento_bem], [Qtd Tecnico])
+		formatString: 0.0
+		lineageTag: ce203b78-4d74-4916-b2f8-7628c56883a3
+
+	measure PROCOMP =
+			
+			CALCULATE(
+			    COUNTROWS('public vw_programa_beneficio'),
+			    'public vw_programa_beneficio'[ds_fornecedor] = "PROCOMP"
+			)
+		formatString: 0
+		lineageTag: 800ca5e7-343a-4c13-970c-04bf02ae319c
+
+	measure DARUMA =
+			
+			CALCULATE(
+			    COUNTROWS('public vw_programa_beneficio'),
+			    'public vw_programa_beneficio'[ds_fornecedor] = "DARUMA"
+			)
+		formatString: 0
+		lineageTag: 06a25fe3-1fd3-4e24-9fef-07cf7f77f519
+
+	measure PERTO =
+			
+			CALCULATE(
+			    COUNTROWS('public vw_programa_beneficio'),
+			    'public vw_programa_beneficio'[ds_fornecedor] = "PERTO"
+			)
+		formatString: 0
+		lineageTag: 3bd63d2e-fff9-4097-b57b-5ab131cd0476
+
+	measure OKI =
+			
+			CALCULATE(
+			    COUNTROWS('public vw_programa_beneficio'),
+			    'public vw_programa_beneficio'[ds_fornecedor] = "OKI"
+			)
+		formatString: 0
+		lineageTag: cc09ebeb-79da-4682-9295-85b55730bb1c
+
+	measure ITAUTEC/OKI =
+			
+			CALCULATE(
+			    COUNTROWS('public vw_programa_beneficio'),
+			    'public vw_programa_beneficio'[ds_fornecedor] = "ITAUTEC/OKI"
+			)
+		formatString: 0
+		lineageTag: 2196716f-1094-4fd8-9c04-18e7471f95cb
+
+	measure 'Medida atendimento por tecnico' = ```
+			
+			    DIVIDE(
+			        sum('public vw_programa_beneficio'[diff_days]),
+			        count('public vw_programa_beneficio'[nm_tecnico])
+			    )
+			```
+		lineageTag: dd4a4875-f6d5-47dd-a52b-c8a8dcfe10d4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Maior tempo de resolução (dias)' = MAX ( 'public vw_programa_beneficio'[diff_days] )
+		formatString: 0
+		lineageTag: 7d9a048f-80f9-41b3-aee9-5a59cb5d1c10
+
+	measure 'Pontuação por técnico' = ```
+			
+			 SUMX(
+			    DISTINCT('public vw_programa_beneficio'[nr_bem]),
+			    CALCULATE(DIVIDE(sum('public vw_programa_beneficio'[diff_days]),
+			        count('public vw_programa_beneficio'[nm_tecnico]))
+			 ))
+			```
+		lineageTag: a3bc1804-f2c9-468f-967e-4bc11becbe65
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Tabela HTML Pontuação por técnico' =
+			VAR Tecnicos =
+			    ADDCOLUMNS (
+			        VALUES ( 'public vw_programa_beneficio'[nm_tecnico] ),
+			        "__Pontuacao", CALCULATE ( [Pontuação por técnico] ),
+			        "__Equipamentos", CALCULATE ( DISTINCTCOUNT ( 'public vw_programa_beneficio'[nr_bem] ) ),
+			        "__MediaAtendimento", CALCULATE ( [Medida atendimento por tecnico] )
+			    )
+			VAR TecnicosComPontuacao =
+			    FILTER ( Tecnicos, NOT ISBLANK ( [__Pontuacao] ) )
+			VAR Linhas =
+			    CONCATENATEX (
+			        TecnicosComPontuacao,
+			        VAR NomeTecnico =
+			            COALESCE ( 'public vw_programa_beneficio'[nm_tecnico], "Não informado" )
+			        VAR NomeSeguro =
+			            SUBSTITUTE (
+			                SUBSTITUTE (
+			                    SUBSTITUTE ( NomeTecnico, "&", "&amp;" ),
+			                    "<", "&lt;"
+			                ),
+			                ">", "&gt;"
+			            )
+			        VAR UFsTecnico =
+			            CALCULATE (
+			                CONCATENATEX (
+			                    VALUES ( 'public vw_programa_beneficio'[sg_uf] ),
+			                    'public vw_programa_beneficio'[sg_uf],
+			                    ", ",
+			                    'public vw_programa_beneficio'[sg_uf],
+			                    ASC
+			                )
+			            )
+			        VAR UFsSeguro =
+			            SUBSTITUTE (
+			                SUBSTITUTE (
+			                    SUBSTITUTE ( COALESCE ( UFsTecnico, "—" ), "&", "&amp;" ),
+			                    "<", "&lt;"
+			                ),
+			                ">", "&gt;"
+			            )
+			        VAR Posicao =
+			            RANKX ( TecnicosComPontuacao, [__Pontuacao],, DESC, DENSE )
+			        VAR FundoLinha =
+			            IF ( MOD ( Posicao, 2 ) = 0, "#FFFFFF", "#F5F7FA" )
+			        RETURN
+			            "<tr style='background-color:" & FundoLinha & ";'>" &
+			                "<td style='width:64px;padding:12px 16px;border-bottom:1px solid #E8EDF3;color:#697586;font-size:20px;font-weight:600;'>" &
+			                    FORMAT ( Posicao, "0" ) &
+			                "</td>" &
+			                "<td style='padding:12px 16px;border-bottom:1px solid #E8EDF3;color:#243247;font-size:21px;font-weight:600;'>" &
+			                    NomeSeguro &
+			                "</td>" &
+			                "<td style='width:80px;padding:12px 16px;border-bottom:1px solid #E8EDF3;color:#526174;font-size:20px;font-weight:700;letter-spacing:0.04em;'>" &
+			                    UFsSeguro &
+			                "</td>" &
+			                "<td style='width:150px;padding:12px 16px;border-bottom:1px solid #E8EDF3;color:#243247;font-size:20px;text-align:right;'>" &
+			                    FORMAT ( [__Equipamentos], "#,##0" ) &
+			                "</td>" &
+			                "<td style='width:190px;padding:12px 16px;border-bottom:1px solid #E8EDF3;color:#243247;font-size:20px;text-align:right;'>" &
+			                    FORMAT ( [__MediaAtendimento], "#,##0.0" ) &
+			                "</td>" &
+			                "<td style='width:150px;padding:12px 20px;border-bottom:1px solid #E8EDF3;text-align:right;'>" &
+			                    "<span style='display:inline-block;min-width:72px;padding:6px 10px;border-radius:20px;background-color:#FFF2CC;color:#775A00;font-size:21px;font-weight:700;text-align:center;'>" &
+			                        FORMAT ( [__Pontuacao], "#,##0.0" ) &
+			                    "</span>" &
+			                "</td>" &
+			            "</tr>",
+			        "",
+			        [__Pontuacao],
+			        DESC
+			    )
+			RETURN
+			    IF (
+			        COUNTROWS ( TecnicosComPontuacao ) = 0,
+			        "<div style='padding:24px;font-family:Segoe UI,Arial,sans-serif;color:#697586;'>Nenhum dado disponível para os filtros selecionados.</div>",
+			        "<div style='box-sizing:border-box;width:100%;height:100%;overflow:auto;padding:20px 24px;background-color:#FFFFFF;font-family:Segoe UI,Arial,sans-serif;'>" &
+			            "<table style='width:100%;border-collapse:collapse;border-spacing:0;'>" &
+			                "<thead><tr style='background-color:#17365D;'>" &
+			                    "<th style='width:64px;padding:12px 16px;color:#FFFFFF;font-size:19px;font-weight:600;text-align:left;'>#</th>" &
+			                    "<th style='padding:12px 16px;color:#FFFFFF;font-size:19px;font-weight:600;text-align:left;'>Técnico</th>" &
+			                    "<th style='width:80px;padding:12px 16px;color:#FFFFFF;font-size:19px;font-weight:600;text-align:left;'>UF</th>" &
+			                    "<th style='width:150px;padding:12px 16px;color:#FFFFFF;font-size:19px;font-weight:600;text-align:right;'>Equipamentos Atendidos</th>" &
+			                    "<th style='width:190px;padding:12px 16px;color:#FFFFFF;font-size:19px;font-weight:600;text-align:right;'>Média de atendimento por técnico</th>" &
+			                    "<th style='width:150px;padding:12px 20px;color:#FFFFFF;font-size:19px;font-weight:600;text-align:right;'>Pontuação</th>" &
+			                "</tr></thead>" &
+			                "<tbody>" & Linhas & "</tbody>" &
+			            "</table>" &
+			        "</div>"
+			    )
+		lineageTag: c4efc6dc-15d8-4c62-940d-ab7827863437
+
+	measure 'Total Fornecedores' = ```
+			'Tabela Medidas'[DARUMA] + 
+			                     'Tabela Medidas'[PERTO] +
+			                     'Tabela Medidas'[PROCOMP] +
+			                     'Tabela Medidas'[ITAUTEC/OKI] +
+			                     'Tabela Medidas'[OKI]
+			```
+		formatString: 0
+		lineageTag: 4e8b6fc5-192b-4f61-a7fc-1ee25678ad88
+
+	measure 'Total Tarefas' = DISTINCTCOUNT('public vw_programa_beneficio'[cd_tarefa])
+		formatString: 0
+		lineageTag: 97217a17-a229-40ea-ae94-5f95716d1338
+
+	measure 'Equipamentos Atendidos' = DISTINCTCOUNT('public vw_programa_beneficio'[nr_bem])
+		formatString: 0
+		lineageTag: d386a47e-3324-41c5-b1cd-8ed14703a3f7
+
+	measure 'Tempo Médio de Resolução (dias)' =
+			VAR TempoMedioDias =
+			    CALCULATE(
+			        AVERAGE('public vw_programa_beneficio'[diff_days]),
+			        'public vw_programa_beneficio'[nm_status_tarefa] = "Concluído"
+			    )
+			RETURN
+			    IF(
+			        ISBLANK(TempoMedioDias),
+			        BLANK(),
+			        IF(
+			            TempoMedioDias < 1,
+			            FORMAT(TempoMedioDias * 24, "##", "pt-BR") & " h",
+			            FORMAT(TempoMedioDias, "##", "pt-BR") & " dias"
+			        )
+			    )
+		lineageTag: b9dcbce1-86ad-4415-8fbb-9410e00af8c7
+
+	measure 'Rosca HTML Fornecedor' =
+			VAR FornecedorSelecionado =
+			    SELECTEDVALUE ( 'public vw_programa_beneficio'[ds_fornecedor] )
+			VAR Atendimentos =
+			    SWITCH (
+			        FornecedorSelecionado,
+			        "DARUMA", [DARUMA],
+			        "PERTO", [PERTO],
+			        "PROCOMP", [PROCOMP],
+			        "ITAUTEC/OKI", [ITAUTEC/OKI],
+			        "OKI", [OKI]
+			    )
+			VAR TotalAtendimentos =
+			    [Total Fornecedores]
+			VAR Percentual =
+			    DIVIDE ( Atendimentos, TotalAtendimentos, 0 )
+			VAR Angulo =
+			    FORMAT ( Percentual * 360, "0.0", "en-US" )
+			VAR Cor =
+			    SWITCH (
+			        FornecedorSelecionado,
+			        "DARUMA", "#2563EB",
+			        "PERTO", "#8B5CF6",
+			        "PROCOMP", "#14B8A6",
+			        "ITAUTEC/OKI", "#EF476F",
+			        "OKI", "#F59E0B",
+			        "#17324D"
+			    )
+			RETURN
+			    IF (
+			        ISBLANK ( FornecedorSelecionado ),
+			        "<div style='padding:20px;font-family:Segoe UI,Arial,sans-serif;color:#697586;'>Nenhum fornecedor selecionado.</div>",
+			        "<div style='box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-family:Segoe UI,Arial,sans-serif;'>" &
+			            "<div style='position:relative;width:124px;height:124px;border-radius:50%;background:conic-gradient(" & Cor & " 0deg, " & Cor & " " & Angulo & "deg, #E8EDF3 " & Angulo & "deg 360deg);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(23,50,77,0.12);'>" &
+			                "<div style='width:92px;height:92px;border-radius:50%;background:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;'>" &
+			                    "<span style='font-size:28px;font-weight:700;color:#17324D;line-height:1.1;'>" & FORMAT ( Atendimentos, "#,##0" ) & "</span>" &
+			                    "<span style='font-size:10px;font-weight:600;letter-spacing:0.04em;color:#697586;text-transform:uppercase;'></span>" &
+			                "</div>" &
+			            "</div>" &
+			            "<div style='padding:4px 10px;border-radius:12px;background:#F3F5F7;color:" & Cor & ";font-size:17px;font-weight:700;'>" &
+			                FORMAT ( Percentual, "0.0%" ) & " do total" &
+			            "</div>" &
+			        "</div>"
+			    )
+		lineageTag: 9ab563c0-7de4-4d03-a240-95ebf3ee849c
+
+	column Dummy
+		formatString: 0
+		lineageTag: a75370eb-b8b5-465f-853f-483a994bd313
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Dummy]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tabela Medidas' = calculated
+		mode: import
+		source = ROW("Dummy", 1)
+
+	annotation PBI_Id = bbcc152fc3b34ef8b89243eff576ae3e
+

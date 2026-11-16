@@ -1,0 +1,25 @@
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# ambiente virtual
+.venv/
+venv/
+
+# python
+__pycache__/
+*.pyc
+
+# jupyter
+.ipynb_checkpoints/
+
+# vscode
+.vscode/
+
+# arquivos de ambiente
+.env
+
+/BI/backup/**
+/markdown/**
+/query test/_SELECT_inc_nr_incidente_crm_ts_inicio_planejado_crm_ts_fim_plan_202610141004.txt
+/query test/vw_crm_202610090950
+/query test/vw_incidente_202610090949

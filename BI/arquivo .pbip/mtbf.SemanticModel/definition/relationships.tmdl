@@ -1,0 +1,30 @@
+relationship cf063c6f-1a41-4a54-ac58-3c379e4ea370
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public vw_programa_beneficio'.data_abertura
+	toColumn: LocalDateTable_eaa3b4bb-66cd-48ba-873a-28f2917f00a3.Date
+
+relationship c1a9801b-3553-4efd-bd39-053b166db37c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public vw_programa_beneficio'.data_fechamento
+	toColumn: LocalDateTable_b99de2f5-3dcf-435b-8e89-92f1de1feb37.Date
+
+relationship c5f034e9-1c4a-4a5f-ab6b-6cef56dfe34d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public vw_programa_beneficio'.data_final
+	toColumn: LocalDateTable_dd0cec7c-013a-4e69-a150-633fd874e1f7.Date
+
+relationship 520b5cdc-381e-4f23-8b8a-ca12e490a49d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: filtro_calendario.Date
+	toColumn: LocalDateTable_75b5430f-0637-42c9-88cd-19b37d24d5df.Date
+
+relationship 43d2a27e-26d3-4306-aa1d-6c6cdfe9cd2f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: atualizacao.atualizacao
+	toColumn: LocalDateTable_df1c6792-ffdd-4192-b199-98546c5f8971.Date
+
+relationship cd5dfee4-5e34-4625-9ff8-baac0e0d9334
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public vw_programa_beneficio'.lag_day
+	toColumn: LocalDateTable_7cd16992-5f32-4fcc-a239-38e2a6d6b5af.Date
+
