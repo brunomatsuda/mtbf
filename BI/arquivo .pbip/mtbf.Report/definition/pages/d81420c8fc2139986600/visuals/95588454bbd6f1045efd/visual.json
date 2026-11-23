@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "public vw_programa_beneficio.nm_tecnico",
-              "nativeQueryRef": "nm_tecnico"
+              "nativeQueryRef": "Nome Tecnico",
+              "displayName": "Nome Tecnico"
             }
           ]
         },
@@ -45,7 +46,8 @@
                 }
               },
               "queryRef": "public vw_programa_beneficio.nr_bem",
-              "nativeQueryRef": "nr_bem"
+              "nativeQueryRef": "Número Bem",
+              "displayName": "Número Bem"
             }
           ]
         },

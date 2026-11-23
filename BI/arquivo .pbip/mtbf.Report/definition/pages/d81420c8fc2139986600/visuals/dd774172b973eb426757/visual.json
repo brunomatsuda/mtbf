@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "dd774172b973eb426757",
   "position": {
-    "x": 60,
-    "y": 180,
+    "x": 180,
+    "y": 188,
     "z": 8000,
     "height": 124,
-    "width": 280,
+    "width": 360,
     "tabOrder": 8000
   },
   "visual": {
@@ -185,7 +185,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Chamados Atendidos'"
+                  "Value": "'Chamados Concluídos'"
                 }
               }
             },

@@ -1,129 +1,119 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "13bd537afa4a90be8b56",
+  "name": "9768bff0902aac5b871d",
   "position": {
-    "x": 642.77998558252159,
-    "y": 13.627844217297278,
-    "z": 0,
-    "height": 207.17914512811961,
-    "width": 316.46045244844646,
-    "tabOrder": 1000
+    "x": 1108.3979963401787,
+    "y": 23.4701645995453,
+    "z": 5000,
+    "height": 122,
+    "width": 322,
+    "tabOrder": 5000
   },
   "visual": {
-    "visualType": "cardVisual",
+    "visualType": "textFilter25A4896A83E0487089E2B90C9AE57C8A",
     "query": {
       "queryState": {
-        "Data": {
+        "field": {
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "public vw_programa_beneficio"
-                        }
-                      },
-                      "Property": "nr_incidente"
+                    "SourceRef": {
+                      "Entity": "public vw_programa_beneficio"
                     }
                   },
-                  "Function": 2
+                  "Property": "sg_uf"
                 }
               },
-              "queryRef": "Count(public vw_programa_beneficio.nr_incidente)",
-              "nativeQueryRef": "Contagem de nr_incidente"
+              "queryRef": "public vw_programa_beneficio.sg_uf",
+              "nativeQueryRef": "sg_uf"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "public vw_programa_beneficio"
-                      }
-                    },
-                    "Property": "nr_incidente"
-                  }
-                },
-                "Function": 2
+      }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "textBox": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
               }
             },
-            "direction": "Descending"
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Arial'"
+                }
+              }
+            }
           }
-        ],
-        "isDefaultSort": true
-      }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [
         {
           "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Total de incidentes'"
-                }
-              }
-            },
             "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "titleWrap": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'UF'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Normal'"
+                }
+              }
+            },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'15'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
+                  "Value": "14D"
                 }
               }
             },
-            "bottom": {
+            "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "'BancoDoBrasil Textos'"
                 }
               }
             },
-            "left": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#17324D'"
+                    }
+                  }
                 }
               }
             },
-            "right": {
+            "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "true"
                 }
               }
             }
@@ -136,7 +126,18 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
                 }
               }
             },
@@ -150,88 +151,13 @@
           }
         }
       ],
-      "subTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "'12'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "spacing": [
-        {
-          "properties": {
-            "customizeSpacing": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "spaceBelowSubTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
-            "spaceAbovePlotArea": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
-            "spaceAboveDivider": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
-            "spaceAboveSubtitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "verticalSpacing": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
       "border": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -240,7 +166,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E6E6E6'"
+                      "Value": "'#E5E7EB'"
                     }
                   }
                 }
@@ -249,7 +175,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "14D"
                 }
               }
             },
@@ -269,7 +195,18 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#9AA9B8'"
+                    }
+                  }
                 }
               }
             },
@@ -277,13 +214,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Custom'"
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "86D"
                 }
               }
             },
@@ -297,7 +227,7 @@
             "shadowBlur": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "12D"
                 }
               }
             },
@@ -311,7 +241,94 @@
             "shadowDistance": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "4D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "85L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BancoDoBrasil Textos'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
                 }
               }
             }
@@ -320,6 +337,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "howCreated": "Copilot"
+  }
 }

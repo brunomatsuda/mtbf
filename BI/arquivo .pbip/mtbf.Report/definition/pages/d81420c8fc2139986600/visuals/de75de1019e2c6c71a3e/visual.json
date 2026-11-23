@@ -3,10 +3,10 @@
   "name": "de75de1019e2c6c71a3e",
   "position": {
     "x": 794.95757934234121,
-    "y": 701.83397719080983,
+    "y": 683.66351823441346,
     "z": 9000,
-    "height": 345,
-    "width": 490,
+    "height": 379.30833071477423,
+    "width": 490.60239182270203,
     "tabOrder": 9000
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "public vw_programa_beneficio.cd_defeito",
-              "nativeQueryRef": "cd_defeito",
-              "active": true
+              "nativeQueryRef": "Código Defeito",
+              "active": true,
+              "displayName": "Código Defeito"
             }
           ]
         },
@@ -51,7 +52,8 @@
                 }
               },
               "queryRef": "CountNonNull(public vw_programa_beneficio.nr_incidente)",
-              "nativeQueryRef": "Contagem de nr_incidente"
+              "nativeQueryRef": "Incidente",
+              "displayName": "Incidente"
             }
           ]
         }

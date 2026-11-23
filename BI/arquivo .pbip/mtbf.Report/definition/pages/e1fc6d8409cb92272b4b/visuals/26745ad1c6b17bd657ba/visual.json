@@ -1,138 +1,84 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "e52b9ce64c35e1d78f47",
+  "name": "26745ad1c6b17bd657ba",
   "position": {
-    "x": 364,
-    "y": 180,
+    "x": 465.618010757657,
+    "y": 54.511376869189114,
     "z": 3000,
-    "height": 124,
-    "width": 280,
+    "height": 122,
+    "width": 322,
     "tabOrder": 3000
   },
   "visual": {
-    "visualType": "cardVisual",
+    "visualType": "slicer",
     "query": {
       "queryState": {
-        "Data": {
+        "Values": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Tabela Medidas"
+                      "Entity": "public vw_programa_beneficio"
                     }
                   },
-                  "Property": "Qtd Reincidências Técnico-Bem"
+                  "Property": "nm_tecnico"
                 }
               },
-              "queryRef": "Tabela Medidas.Qtd Reincidências Técnico-Bem",
-              "nativeQueryRef": "Reincidência",
-              "displayName": "Reincidência"
+              "queryRef": "public vw_programa_beneficio.nm_tecnico",
+              "nativeQueryRef": "Tecnico",
+              "active": true,
+              "displayName": "Tecnico"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Tabela Medidas"
-                  }
-                },
-                "Property": "Qtd Reincidências Técnico-Bem"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
-      "label": [
+      "data": [
         {
           "properties": {
-            "show": {
+            "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "layout": [
-        {
-          "properties": {
-            "autoGrid": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'Dropdown'"
                 }
               }
             }
           }
         }
       ],
-      "value": [
+      "general": [
         {
           "properties": {
-            "show": {
+            "orientation": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "1D"
                 }
               }
             }
           }
-        },
+        }
+      ],
+      "header": [
         {
           "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'BancoDoBrasil Titulos'"
+                  "Value": "'BancoDoBrasil Textos'"
                 }
               }
             },
-            "horizontalAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'left'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "44D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "outline": [
-        {
-          "properties": {
             "show": {
               "expr": {
                 "Literal": {
@@ -140,31 +86,77 @@
                 }
               }
             }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ],
-      "divider": [
+      "items": [
         {
           "properties": {
-            "show": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BancoDoBrasil Textos'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropdown": [
+        {
+          "properties": {
+            "borderRadius": {
+              "expr": {
+                "Literal": {
+                  "Value": "7L"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            },
+            "borderIndividualCorners": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ],
-      "padding": [
+      "selectionIcon": [
         {
-          "properties": {}
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -172,13 +164,6 @@
       "title": [
         {
           "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Reincidência'"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
@@ -186,10 +171,17 @@
                 }
               }
             },
-            "titleWrap": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'Nome Técnico'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Normal'"
                 }
               }
             },
@@ -204,13 +196,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'BancoDoBrasil Textos'"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
                 }
               }
             },
@@ -376,14 +361,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
+                  "Value": "false"
                 }
               }
             },
@@ -397,58 +375,29 @@
           }
         }
       ],
-      "spacing": [
+      "visualHeader": [
         {
           "properties": {
-            "customizeSpacing": {
+            "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "spaceBelowSubTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
-            "spaceAbovePlotArea": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
-            "spaceAboveDivider": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
-            "spaceAboveSubtitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
+                  "Value": "0D"
                 }
               }
             }
           }
-        },
+        }
+      ],
+      "divider": [
         {
           "properties": {
-            "verticalSpacing": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "2D"
+                  "Value": "false"
                 }
               }
             }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ],
@@ -458,53 +407,28 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
+                  "Value": "14D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "16D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "visualHeader": [
-        {
-          "properties": {
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
-                    }
-                  }
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "16D"
                 }
               }
             }

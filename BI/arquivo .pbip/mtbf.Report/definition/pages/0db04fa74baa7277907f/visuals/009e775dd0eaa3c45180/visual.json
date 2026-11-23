@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "009e775dd0eaa3c45180",
   "position": {
-    "x": 495.1450065618011,
-    "y": 24.98438106504501,
-    "z": 5000,
+    "x": 672.3069813866648,
+    "y": 23.4701645995453,
+    "z": 4000,
     "height": 122.65059795567551,
     "width": 299.81257278054011,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "textFilter25A4896A83E0487089E2B90C9AE57C8A",
@@ -32,6 +32,33 @@
           ]
         }
       }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "textBox": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Arial'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [

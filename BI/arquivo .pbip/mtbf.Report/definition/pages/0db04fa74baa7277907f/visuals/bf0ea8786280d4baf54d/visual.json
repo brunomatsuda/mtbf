@@ -23,11 +23,12 @@
                       "Entity": "public vw_programa_beneficio"
                     }
                   },
-                  "Property": "estado"
+                  "Property": "estado_normalizado"
                 }
               },
-              "queryRef": "public vw_programa_beneficio.estado",
-              "nativeQueryRef": "estado"
+              "queryRef": "public vw_programa_beneficio.estado_normalizado",
+              "nativeQueryRef": "Estado",
+              "displayName": "Estado"
             }
           ]
         },
@@ -45,7 +46,8 @@
                 }
               },
               "queryRef": "Tabela Medidas.qtd_atendimento_bem",
-              "nativeQueryRef": "qtd_atendimento_bem"
+              "nativeQueryRef": "QTD Atendimento Bem",
+              "displayName": "QTD Atendimento Bem"
             }
           ]
         }
@@ -177,6 +179,33 @@
                       "Value": "'#ECFDFF'"
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "zoom": [
+        {
+          "properties": {
+            "selectionZoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "manualZoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "autoZoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

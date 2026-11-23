@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "3e4721b900de8535e0e6",
   "position": {
-    "x": 1003.9178573408994,
-    "y": 13.627844217297278,
-    "z": 4000,
-    "height": 617.79560451747659,
+    "x": 18.17045895639637,
+    "y": 277.09949908504467,
+    "z": 1000,
+    "height": 781.329735125044,
     "width": 894.89510360252132,
-    "tabOrder": 4000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -66,11 +66,11 @@
                       "Property": "nr_matricula"
                     }
                   },
-                  "Function": 0
+                  "Function": 5
                 }
               },
               "queryRef": "Sum(public vw_programa_beneficio.nr_matricula)",
-              "nativeQueryRef": "Soma de nr_matricula"
+              "nativeQueryRef": "Contagem de nr_matricula"
             }
           ]
         }

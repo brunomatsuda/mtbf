@@ -3,9 +3,9 @@
   "name": "43b55a9358e8bccc0189",
   "position": {
     "x": 54.511376869189114,
-    "y": 701.83397719080983,
+    "y": 683.66351823441346,
     "z": 4000,
-    "height": 345.23872017153104,
+    "height": 379.30833071477423,
     "width": 715.46182140810708,
     "tabOrder": 4000
   },
@@ -61,7 +61,8 @@
                   "Function": 2
                 }
               },
-              "queryRef": "Count(public vw_programa_beneficio.nr_incidente)"
+              "queryRef": "Count(public vw_programa_beneficio.nr_incidente)",
+              "displayName": "Incidente"
             }
           ]
         }

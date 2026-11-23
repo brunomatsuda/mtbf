@@ -144,6 +144,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
+			        },
+			        {
+			          "Número Bem": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -439,6 +449,16 @@ cultureInfo pt-BR
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Nome Tecnico": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -2465,11 +2485,83 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "public_vw_programa_beneficio.lead_day.hierarquia_de_data": {
+			    "public_vw_programa_beneficio.lag_day.mê": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "public vw_programa_beneficio",
-			          "VariationSource": "lead_day",
+			          "VariationSource": "lag_day",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "lag day mê": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio.lag_day.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "public vw_programa_beneficio",
+			          "VariationSource": "lag_day",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "lag day trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio.lag_day.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "public vw_programa_beneficio",
+			          "VariationSource": "lag_day",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "lag day ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio.lag_day.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "public vw_programa_beneficio",
+			          "VariationSource": "lag_day",
 			          "VariationSet": "Variação",
 			          "Hierarchy": "Hierarquia de datas"
 			        }
@@ -2553,101 +2645,35 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "public_vw_programa_beneficio.lead_day.ano": {
+			    "public_vw_programa_beneficio.lag_day": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "public vw_programa_beneficio",
-			          "VariationSource": "lead_day",
-			          "VariationSet": "Variação",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Ano"
+			          "ConceptualProperty": "lag_day"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "ano": {
+			          "lag day": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "lead day ano": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "public_vw_programa_beneficio.lead_day.trimestre": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "public vw_programa_beneficio",
-			          "VariationSource": "lead_day",
-			          "VariationSet": "Variação",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Trimestre"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "trimestre": {
-			            "State": "Generated"
+			          "lag_day": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "lead day trimestre": {
-			            "State": "Generated"
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
 			          }
 			        }
-			      ]
-			    },
-			    "public_vw_programa_beneficio.lead_day.mê": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "public vw_programa_beneficio",
-			          "VariationSource": "lead_day",
-			          "VariationSet": "Variação",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Mês"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "mê": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "lead day mê": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "public_vw_programa_beneficio.lead_day.dia": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "public vw_programa_beneficio",
-			          "VariationSource": "lead_day",
-			          "VariationSet": "Variação",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Dia"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "dia": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "lead day dia": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
+			      ],
+			      "SemanticType": "Time"
 			    },
 			    "public_vw_programa_beneficio.estado": {
 			      "Definition": {
@@ -2869,16 +2895,6 @@ cultureInfo pt-BR
 			          "qtd reincidências técnico bem": {
 			            "State": "Generated",
 			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "Reincidência": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -3403,9 +3419,1197 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "public_vw_programa_beneficio.lag_day.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "public vw_programa_beneficio",
+			          "VariationSource": "lag_day",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "lag day dia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio.diff_day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "public vw_programa_beneficio",
+			          "ConceptualProperty": "diff_days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "diff day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "diff_days": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio.cd_defeito": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "public vw_programa_beneficio",
+			          "ConceptualProperty": "cd_defeito"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cd defeito": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cd_defeito": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Código Defeito": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio.nm_cat_grupo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "public vw_programa_beneficio",
+			          "ConceptualProperty": "nm_cat_grupo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nm cat grupo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nm_cat_grupo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Grupo CAT": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio.gereg": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "public vw_programa_beneficio",
+			          "ConceptualProperty": "gereg"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gereg": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio.super": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "public vw_programa_beneficio",
+			          "ConceptualProperty": "super"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "super": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "great": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "brilliant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ace": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "cracking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "outstanding": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "superior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "better": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "high-quality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "high-class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "topnotch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio.estado_normalizado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "public vw_programa_beneficio",
+			          "ConceptualProperty": "estado_normalizado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado normalizado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estado_normalizado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Estado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabela_medida.total_fornecedores": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabela Medidas",
+			          "ConceptualProperty": "Total Fornecedores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total fornecedores": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate fornecedore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall fornecedore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "tabela_medida.total_tarefas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabela Medidas",
+			          "ConceptualProperty": "Total Tarefas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total tarefas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate tarefa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall tarefa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "tabela_medida.equipamentos_atendidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabela Medidas",
+			          "ConceptualProperty": "Equipamentos Atendidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "equipamentos atendidos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabela_medida.tempo_médio_de_resolução_dias": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabela Medidas",
+			          "ConceptualProperty": "Tempo Médio de Resolução (dias)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tempo médio de resolução (dias)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tempo médio de resolução": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "tabela_medida.rosca_HTML_fornecedor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabela Medidas",
+			          "ConceptualProperty": "Rosca HTML Fornecedor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rosca HTML fornecedor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "atualizacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "atualizacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "atualizacao": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        }
+			      ]
+			    },
+			    "atualizacao.atualizacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "atualizacao",
+			          "ConceptualProperty": "atualizacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "atualizacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "atualizacao.atualizacao.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "atualizacao",
+			          "VariationSource": "atualizacao",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "atualizacao.atualizacao.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "atualizacao",
+			          "VariationSource": "atualizacao",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "atualizacao ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "atualizacao.atualizacao.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "atualizacao",
+			          "VariationSource": "atualizacao",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "atualizacao trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "atualizacao.atualizacao.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "atualizacao",
+			          "VariationSource": "atualizacao",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "atualizacao mê": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "atualizacao.atualizacao.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "atualizacao",
+			          "VariationSource": "atualizacao",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "atualizacao dia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "atualizacao_atualizacao_mê_has_atualizacao_atualizacao_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "atualizacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atualizacao.atualizacao.mê": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.mê"
+			          }
+			        },
+			        "atualizacao.atualizacao.dia": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.mê"
+			            },
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.dia"
+			            },
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê5"
+			        }
+			      ]
+			    },
+			    "atualizacao_atualizacao_trimestre_has_atualizacao_atualizacao_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "atualizacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atualizacao.atualizacao.trimestre": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.trimestre"
+			          }
+			        },
+			        "atualizacao.atualizacao.mê": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.trimestre"
+			            },
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.mê"
+			            },
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres5"
+			        }
+			      ]
+			    },
+			    "atualizacao_atualizacao_ano_has_atualizacao_atualizacao_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "atualizacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atualizacao.atualizacao.ano": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.ano"
+			          }
+			        },
+			        "atualizacao.atualizacao.trimestre": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.ano"
+			            },
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.trimestre"
+			            },
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos5"
+			        }
+			      ]
+			    },
+			    "atualizacao_atualizacao_hierarquia_de_data_has_atualizacao_atualizacao_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "atualizacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atualizacao.atualizacao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.hierarquia_de_data"
+			          }
+			        },
+			        "atualizacao.atualizacao.dia": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias"
+			        }
+			      ]
+			    },
+			    "atualizacao_atualizacao_hierarquia_de_data_has_atualizacao_atualizacao_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "atualizacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atualizacao.atualizacao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.hierarquia_de_data"
+			          }
+			        },
+			        "atualizacao.atualizacao.mê": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê"
+			        }
+			      ]
+			    },
+			    "atualizacao_atualizacao_hierarquia_de_data_has_atualizacao_atualizacao_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "atualizacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atualizacao.atualizacao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.hierarquia_de_data"
+			          }
+			        },
+			        "atualizacao.atualizacao.trimestre": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres"
+			        }
+			      ]
+			    },
+			    "atualizacao_atualizacao_hierarquia_de_data_has_atualizacao_atualizacao_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "atualizacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atualizacao.atualizacao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.hierarquia_de_data"
+			          }
+			        },
+			        "atualizacao.atualizacao.ano": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos"
+			        }
+			      ]
+			    },
+			    "atualizacao_atualizacao_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "atualizacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atualizacao.atualizacao": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao"
+			          }
+			        },
+			        "atualizacao.atualizacao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atualizacao.atualizacao"
+			            },
+			            "Object": {
+			              "Role": "atualizacao.atualizacao.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "atualizacaos_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "filtro_calendario_date_mê_has_filtro_calendario_date_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "filtro_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "filtro_calendario.date.mê": {
+			          "Target": {
+			            "Entity": "filtro_calendario.date.mê"
+			          }
+			        },
+			        "filtro_calendario.date.dia": {
+			          "Target": {
+			            "Entity": "filtro_calendario.date.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "filtro_calendario.date.mê"
+			            },
+			            "Object": {
+			              "Role": "filtro_calendario.date.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "filtro_calendario.date.dia"
+			            },
+			            "Object": {
+			              "Role": "filtro_calendario.date.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "filtro_calendario.date.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "filtro_calendario.date.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê4"
+			        }
+			      ]
+			    },
+			    "filtro_calendario_date_trimestre_has_filtro_calendario_date_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "filtro_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "filtro_calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "filtro_calendario.date.trimestre"
+			          }
+			        },
+			        "filtro_calendario.date.mê": {
+			          "Target": {
+			            "Entity": "filtro_calendario.date.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "filtro_calendario.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "filtro_calendario.date.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "filtro_calendario.date.mê"
+			            },
+			            "Object": {
+			              "Role": "filtro_calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "filtro_calendario.date.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "filtro_calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres4"
+			        }
+			      ]
+			    },
+			    "filtro_calendario_date_ano_has_filtro_calendario_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "filtro_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "filtro_calendario.date.ano": {
+			          "Target": {
+			            "Entity": "filtro_calendario.date.ano"
+			          }
+			        },
+			        "filtro_calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "filtro_calendario.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "filtro_calendario.date.ano"
+			            },
+			            "Object": {
+			              "Role": "filtro_calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "filtro_calendario.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "filtro_calendario.date.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "filtro_calendario.date.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "filtro_calendario.date.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos4"
+			        }
+			      ]
+			    },
 			    "filtro_calendario_date_hierarquia_de_data_has_filtro_calendario_date_dia": {
 			      "Binding": {
 			        "ConceptualEntity": "filtro_calendario"
@@ -3435,7 +4639,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
+			          "ID": "hierarquia_de_data_have_dias1"
 			        }
 			      ]
 			    },
@@ -3468,7 +4672,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
+			          "ID": "hierarquia_de_data_have_mê1"
 			        }
 			      ]
 			    },
@@ -3501,7 +4705,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
+			          "ID": "hierarquia_de_data_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -3534,7 +4738,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos"
+			          "ID": "hierarquia_de_data_have_anos1"
 			        }
 			      ]
 			    },
@@ -3571,20 +4775,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "public_vw_programa_beneficio_lead_day_mê_has_public_vw_programa_beneficio_lead_day_dia": {
+			    "public_vw_programa_beneficio_lag_day_mê_has_public_vw_programa_beneficio_lag_day_dia": {
 			      "Binding": {
 			        "ConceptualEntity": "public vw_programa_beneficio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_vw_programa_beneficio.lead_day.mê": {
+			        "public_vw_programa_beneficio.lag_day.mê": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.mê"
+			            "Entity": "public_vw_programa_beneficio.lag_day.mê"
 			          }
 			        },
-			        "public_vw_programa_beneficio.lead_day.dia": {
+			        "public_vw_programa_beneficio.lag_day.dia": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.dia"
+			            "Entity": "public_vw_programa_beneficio.lag_day.dia"
 			          }
 			        }
 			      },
@@ -3592,33 +4796,33 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.mê"
+			              "Role": "public_vw_programa_beneficio.lag_day.mê"
 			            },
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.dia"
+			              "Role": "public_vw_programa_beneficio.lag_day.dia"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias"
+			          "ID": "mê_have_dias2"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.dia"
+			              "Role": "public_vw_programa_beneficio.lag_day.dia"
 			            },
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.mê"
+			              "Role": "public_vw_programa_beneficio.lag_day.mê"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê"
+			          "ID": "dias_have_mê2"
 			        },
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.dia"
+			              "Role": "public_vw_programa_beneficio.lag_day.dia"
 			            },
 			            "Prepositions": [
 			              {
@@ -3628,7 +4832,7 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.mê"
+			              "Role": "public_vw_programa_beneficio.lag_day.mê"
 			            }
 			          },
 			          "State": "Generated",
@@ -3637,20 +4841,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "public_vw_programa_beneficio_lead_day_trimestre_has_public_vw_programa_beneficio_lead_day_mê": {
+			    "public_vw_programa_beneficio_lag_day_trimestre_has_public_vw_programa_beneficio_lag_day_mê": {
 			      "Binding": {
 			        "ConceptualEntity": "public vw_programa_beneficio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_vw_programa_beneficio.lead_day.trimestre": {
+			        "public_vw_programa_beneficio.lag_day.trimestre": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.trimestre"
+			            "Entity": "public_vw_programa_beneficio.lag_day.trimestre"
 			          }
 			        },
-			        "public_vw_programa_beneficio.lead_day.mê": {
+			        "public_vw_programa_beneficio.lag_day.mê": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.mê"
+			            "Entity": "public_vw_programa_beneficio.lag_day.mê"
 			          }
 			        }
 			      },
@@ -3658,33 +4862,33 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.trimestre"
+			              "Role": "public_vw_programa_beneficio.lag_day.trimestre"
 			            },
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.mê"
+			              "Role": "public_vw_programa_beneficio.lag_day.mê"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
+			          "ID": "trimestres_have_mê2"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.mê"
+			              "Role": "public_vw_programa_beneficio.lag_day.mê"
 			            },
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.trimestre"
+			              "Role": "public_vw_programa_beneficio.lag_day.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
+			          "ID": "mê_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.mê"
+			              "Role": "public_vw_programa_beneficio.lag_day.mê"
 			            },
 			            "Prepositions": [
 			              {
@@ -3694,7 +4898,7 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.trimestre"
+			              "Role": "public_vw_programa_beneficio.lag_day.trimestre"
 			            }
 			          },
 			          "State": "Generated",
@@ -3703,20 +4907,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "public_vw_programa_beneficio_lead_day_ano_has_public_vw_programa_beneficio_lead_day_trimestre": {
+			    "public_vw_programa_beneficio_lag_day_ano_has_public_vw_programa_beneficio_lag_day_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "public vw_programa_beneficio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_vw_programa_beneficio.lead_day.ano": {
+			        "public_vw_programa_beneficio.lag_day.ano": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.ano"
+			            "Entity": "public_vw_programa_beneficio.lag_day.ano"
 			          }
 			        },
-			        "public_vw_programa_beneficio.lead_day.trimestre": {
+			        "public_vw_programa_beneficio.lag_day.trimestre": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.trimestre"
+			            "Entity": "public_vw_programa_beneficio.lag_day.trimestre"
 			          }
 			        }
 			      },
@@ -3724,33 +4928,33 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.ano"
+			              "Role": "public_vw_programa_beneficio.lag_day.ano"
 			            },
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.trimestre"
+			              "Role": "public_vw_programa_beneficio.lag_day.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
+			          "ID": "anos_have_trimestres2"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.trimestre"
+			              "Role": "public_vw_programa_beneficio.lag_day.trimestre"
 			            },
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.ano"
+			              "Role": "public_vw_programa_beneficio.lag_day.ano"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
+			          "ID": "trimestres_have_anos2"
 			        },
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.trimestre"
+			              "Role": "public_vw_programa_beneficio.lag_day.trimestre"
 			            },
 			            "Prepositions": [
 			              {
@@ -3760,7 +4964,7 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.ano"
+			              "Role": "public_vw_programa_beneficio.lag_day.ano"
 			            }
 			          },
 			          "State": "Generated",
@@ -3769,20 +4973,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "public_vw_programa_beneficio_lead_day_hierarquia_de_data_has_public_vw_programa_beneficio_lead_day_dia": {
+			    "public_vw_programa_beneficio_lag_day_hierarquia_de_data_has_public_vw_programa_beneficio_lag_day_dia": {
 			      "Binding": {
 			        "ConceptualEntity": "public vw_programa_beneficio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_vw_programa_beneficio.lead_day.hierarquia_de_data": {
+			        "public_vw_programa_beneficio.lag_day.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.hierarquia_de_data"
+			            "Entity": "public_vw_programa_beneficio.lag_day.hierarquia_de_data"
 			          }
 			        },
-			        "public_vw_programa_beneficio.lead_day.dia": {
+			        "public_vw_programa_beneficio.lag_day.dia": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.dia"
+			            "Entity": "public_vw_programa_beneficio.lag_day.dia"
 			          }
 			        }
 			      },
@@ -3790,32 +4994,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.hierarquia_de_data"
+			              "Role": "public_vw_programa_beneficio.lag_day.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.dia"
+			              "Role": "public_vw_programa_beneficio.lag_day.dia"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
+			          "ID": "hierarquia_de_data_have_dias2"
 			        }
 			      ]
 			    },
-			    "public_vw_programa_beneficio_lead_day_hierarquia_de_data_has_public_vw_programa_beneficio_lead_day_mê": {
+			    "public_vw_programa_beneficio_lag_day_hierarquia_de_data_has_public_vw_programa_beneficio_lag_day_mê": {
 			      "Binding": {
 			        "ConceptualEntity": "public vw_programa_beneficio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_vw_programa_beneficio.lead_day.hierarquia_de_data": {
+			        "public_vw_programa_beneficio.lag_day.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.hierarquia_de_data"
+			            "Entity": "public_vw_programa_beneficio.lag_day.hierarquia_de_data"
 			          }
 			        },
-			        "public_vw_programa_beneficio.lead_day.mê": {
+			        "public_vw_programa_beneficio.lag_day.mê": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.mê"
+			            "Entity": "public_vw_programa_beneficio.lag_day.mê"
 			          }
 			        }
 			      },
@@ -3823,32 +5027,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.hierarquia_de_data"
+			              "Role": "public_vw_programa_beneficio.lag_day.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.mê"
+			              "Role": "public_vw_programa_beneficio.lag_day.mê"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê1"
+			          "ID": "hierarquia_de_data_have_mê2"
 			        }
 			      ]
 			    },
-			    "public_vw_programa_beneficio_lead_day_hierarquia_de_data_has_public_vw_programa_beneficio_lead_day_trimestre": {
+			    "public_vw_programa_beneficio_lag_day_hierarquia_de_data_has_public_vw_programa_beneficio_lag_day_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "public vw_programa_beneficio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_vw_programa_beneficio.lead_day.hierarquia_de_data": {
+			        "public_vw_programa_beneficio.lag_day.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.hierarquia_de_data"
+			            "Entity": "public_vw_programa_beneficio.lag_day.hierarquia_de_data"
 			          }
 			        },
-			        "public_vw_programa_beneficio.lead_day.trimestre": {
+			        "public_vw_programa_beneficio.lag_day.trimestre": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.trimestre"
+			            "Entity": "public_vw_programa_beneficio.lag_day.trimestre"
 			          }
 			        }
 			      },
@@ -3856,32 +5060,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.hierarquia_de_data"
+			              "Role": "public_vw_programa_beneficio.lag_day.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.trimestre"
+			              "Role": "public_vw_programa_beneficio.lag_day.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres1"
+			          "ID": "hierarquia_de_data_have_trimestres2"
 			        }
 			      ]
 			    },
-			    "public_vw_programa_beneficio_lead_day_hierarquia_de_data_has_public_vw_programa_beneficio_lead_day_ano": {
+			    "public_vw_programa_beneficio_lag_day_hierarquia_de_data_has_public_vw_programa_beneficio_lag_day_ano": {
 			      "Binding": {
 			        "ConceptualEntity": "public vw_programa_beneficio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_vw_programa_beneficio.lead_day.hierarquia_de_data": {
+			        "public_vw_programa_beneficio.lag_day.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.hierarquia_de_data"
+			            "Entity": "public_vw_programa_beneficio.lag_day.hierarquia_de_data"
 			          }
 			        },
-			        "public_vw_programa_beneficio.lead_day.ano": {
+			        "public_vw_programa_beneficio.lag_day.ano": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.ano"
+			            "Entity": "public_vw_programa_beneficio.lag_day.ano"
 			          }
 			        }
 			      },
@@ -3889,32 +5093,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day.hierarquia_de_data"
+			              "Role": "public_vw_programa_beneficio.lag_day.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.ano"
+			              "Role": "public_vw_programa_beneficio.lag_day.ano"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos1"
+			          "ID": "hierarquia_de_data_have_anos2"
 			        }
 			      ]
 			    },
-			    "public_vw_programa_beneficio_lead_day_has_hierarquia_de_data": {
+			    "public_vw_programa_beneficio_lag_day_has_hierarquia_de_data": {
 			      "Binding": {
 			        "ConceptualEntity": "public vw_programa_beneficio"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_vw_programa_beneficio.lead_day": {
+			        "public_vw_programa_beneficio.lag_day": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day"
+			            "Entity": "public_vw_programa_beneficio.lag_day"
 			          }
 			        },
-			        "public_vw_programa_beneficio.lead_day.hierarquia_de_data": {
+			        "public_vw_programa_beneficio.lag_day.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day.hierarquia_de_data"
+			            "Entity": "public_vw_programa_beneficio.lag_day.hierarquia_de_data"
 			          }
 			        }
 			      },
@@ -3922,15 +5126,15 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_vw_programa_beneficio.lead_day"
+			              "Role": "public_vw_programa_beneficio.lag_day"
 			            },
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day.hierarquia_de_data"
+			              "Role": "public_vw_programa_beneficio.lag_day.hierarquia_de_data"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "lead_days_have_hierarquia_de_data"
+			          "ID": "lag_days_have_hierarquia_de_data"
 			        }
 			      ]
 			    },
@@ -3963,7 +5167,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias1"
+			          "ID": "mê_have_dias3"
 			        },
 			        {
 			          "Attribute": {
@@ -3976,7 +5180,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê1"
+			          "ID": "dias_have_mê3"
 			        },
 			        {
 			          "Preposition": {
@@ -4029,7 +5233,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê1"
+			          "ID": "trimestres_have_mê3"
 			        },
 			        {
 			          "Attribute": {
@@ -4042,7 +5246,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres1"
+			          "ID": "mê_have_trimestres3"
 			        },
 			        {
 			          "Preposition": {
@@ -4095,7 +5299,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres1"
+			          "ID": "anos_have_trimestres3"
 			        },
 			        {
 			          "Attribute": {
@@ -4108,7 +5312,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos1"
+			          "ID": "trimestres_have_anos3"
 			        },
 			        {
 			          "Preposition": {
@@ -4161,7 +5365,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias2"
+			          "ID": "hierarquia_de_data_have_dias3"
 			        }
 			      ]
 			    },
@@ -4194,7 +5398,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê2"
+			          "ID": "hierarquia_de_data_have_mê3"
 			        }
 			      ]
 			    },
@@ -4227,7 +5431,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres2"
+			          "ID": "hierarquia_de_data_have_trimestres3"
 			        }
 			      ]
 			    },
@@ -4260,7 +5464,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos2"
+			          "ID": "hierarquia_de_data_have_anos3"
 			        }
 			      ]
 			    },
@@ -4326,7 +5530,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias2"
+			          "ID": "mê_have_dias4"
 			        },
 			        {
 			          "Attribute": {
@@ -4339,7 +5543,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê2"
+			          "ID": "dias_have_mê4"
 			        },
 			        {
 			          "Preposition": {
@@ -4392,7 +5596,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê2"
+			          "ID": "trimestres_have_mê4"
 			        },
 			        {
 			          "Attribute": {
@@ -4405,7 +5609,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres2"
+			          "ID": "mê_have_trimestres4"
 			        },
 			        {
 			          "Preposition": {
@@ -4458,7 +5662,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres2"
+			          "ID": "anos_have_trimestres4"
 			        },
 			        {
 			          "Attribute": {
@@ -4471,7 +5675,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos2"
+			          "ID": "trimestres_have_anos4"
 			        },
 			        {
 			          "Preposition": {
@@ -4524,7 +5728,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias3"
+			          "ID": "hierarquia_de_data_have_dias4"
 			        }
 			      ]
 			    },
@@ -4557,7 +5761,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê3"
+			          "ID": "hierarquia_de_data_have_mê4"
 			        }
 			      ]
 			    },
@@ -4590,7 +5794,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres3"
+			          "ID": "hierarquia_de_data_have_trimestres4"
 			        }
 			      ]
 			    },
@@ -4623,7 +5827,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos3"
+			          "ID": "hierarquia_de_data_have_anos4"
 			        }
 			      ]
 			    },
@@ -4689,7 +5893,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias3"
+			          "ID": "mê_have_dias5"
 			        },
 			        {
 			          "Attribute": {
@@ -4702,7 +5906,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê3"
+			          "ID": "dias_have_mê5"
 			        },
 			        {
 			          "Preposition": {
@@ -4755,7 +5959,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê3"
+			          "ID": "trimestres_have_mê5"
 			        },
 			        {
 			          "Attribute": {
@@ -4768,7 +5972,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres3"
+			          "ID": "mê_have_trimestres5"
 			        },
 			        {
 			          "Preposition": {
@@ -4821,7 +6025,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres3"
+			          "ID": "anos_have_trimestres5"
 			        },
 			        {
 			          "Attribute": {
@@ -4834,7 +6038,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos3"
+			          "ID": "trimestres_have_anos5"
 			        },
 			        {
 			          "Preposition": {
@@ -4887,7 +6091,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias4"
+			          "ID": "hierarquia_de_data_have_dias5"
 			        }
 			      ]
 			    },
@@ -4920,7 +6124,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê4"
+			          "ID": "hierarquia_de_data_have_mê5"
 			        }
 			      ]
 			    },
@@ -4953,7 +6157,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres4"
+			          "ID": "hierarquia_de_data_have_trimestres5"
 			        }
 			      ]
 			    },
@@ -4986,7 +6190,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos4"
+			          "ID": "hierarquia_de_data_have_anos5"
 			        }
 			      ]
 			    },
@@ -5020,6 +6224,402 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "data_aberturas_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "atualizacao_has_atualizacao": {
+			      "Binding": {
+			        "ConceptualEntity": "atualizacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atualizacao": {
+			          "Target": {
+			            "Entity": "atualizacao"
+			          }
+			        },
+			        "atualizacao.atualizacao": {
+			          "Target": {
+			            "Entity": "atualizacao.atualizacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atualizacao"
+			            },
+			            "Object": {
+			              "Role": "atualizacao.atualizacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "atualizacaos_have_atualizacaos"
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio_has_tabela_medida_rosca_HTML_fornecedor": {
+			      "Binding": {
+			        "ConceptualEntity": "public vw_programa_beneficio"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_vw_programa_beneficio": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio"
+			          }
+			        },
+			        "tabela_medida.rosca_HTML_fornecedor": {
+			          "Target": {
+			            "Entity": "tabela_medida.rosca_HTML_fornecedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_vw_programa_beneficio"
+			            },
+			            "Object": {
+			              "Role": "tabela_medida.rosca_HTML_fornecedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_vw_programa_beneficios_have_rosca_HTML_fornecedor"
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio_has_tabela_medida_tempo_médio_de_resolução_dias": {
+			      "Binding": {
+			        "ConceptualEntity": "public vw_programa_beneficio"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_vw_programa_beneficio": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio"
+			          }
+			        },
+			        "tabela_medida.tempo_médio_de_resolução_dias": {
+			          "Target": {
+			            "Entity": "tabela_medida.tempo_médio_de_resolução_dias"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_vw_programa_beneficio"
+			            },
+			            "Object": {
+			              "Role": "tabela_medida.tempo_médio_de_resolução_dias"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_vw_programa_beneficios_have_tempo_médio_de_resolução_dias"
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio_has_tabela_medida_equipamentos_atendidos": {
+			      "Binding": {
+			        "ConceptualEntity": "public vw_programa_beneficio"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_vw_programa_beneficio": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio"
+			          }
+			        },
+			        "tabela_medida.equipamentos_atendidos": {
+			          "Target": {
+			            "Entity": "tabela_medida.equipamentos_atendidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_vw_programa_beneficio"
+			            },
+			            "Object": {
+			              "Role": "tabela_medida.equipamentos_atendidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_vw_programa_beneficios_have_equipamentos_atendidos"
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio_has_tabela_medida_total_tarefas": {
+			      "Binding": {
+			        "ConceptualEntity": "public vw_programa_beneficio"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_vw_programa_beneficio": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio"
+			          }
+			        },
+			        "tabela_medida.total_tarefas": {
+			          "Target": {
+			            "Entity": "tabela_medida.total_tarefas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_vw_programa_beneficio"
+			            },
+			            "Object": {
+			              "Role": "tabela_medida.total_tarefas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_vw_programa_beneficios_have_total_tarefas"
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio_has_tabela_medida_total_fornecedores": {
+			      "Binding": {
+			        "ConceptualEntity": "public vw_programa_beneficio"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_vw_programa_beneficio": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio"
+			          }
+			        },
+			        "tabela_medida.total_fornecedores": {
+			          "Target": {
+			            "Entity": "tabela_medida.total_fornecedores"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_vw_programa_beneficio"
+			            },
+			            "Object": {
+			              "Role": "tabela_medida.total_fornecedores"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_vw_programa_beneficios_have_total_fornecedores"
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio_has_estado_normalizado": {
+			      "Binding": {
+			        "ConceptualEntity": "public vw_programa_beneficio"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_vw_programa_beneficio": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio"
+			          }
+			        },
+			        "public_vw_programa_beneficio.estado_normalizado": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio.estado_normalizado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_vw_programa_beneficio"
+			            },
+			            "Object": {
+			              "Role": "public_vw_programa_beneficio.estado_normalizado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_vw_programa_beneficios_have_estado_normalizados"
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio_has_super": {
+			      "Binding": {
+			        "ConceptualEntity": "public vw_programa_beneficio"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_vw_programa_beneficio": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio"
+			          }
+			        },
+			        "public_vw_programa_beneficio.super": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio.super"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_vw_programa_beneficio"
+			            },
+			            "Object": {
+			              "Role": "public_vw_programa_beneficio.super"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_vw_programa_beneficios_have_supers"
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio_has_gereg": {
+			      "Binding": {
+			        "ConceptualEntity": "public vw_programa_beneficio"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_vw_programa_beneficio": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio"
+			          }
+			        },
+			        "public_vw_programa_beneficio.gereg": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio.gereg"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_vw_programa_beneficio"
+			            },
+			            "Object": {
+			              "Role": "public_vw_programa_beneficio.gereg"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_vw_programa_beneficios_have_geregs"
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio_has_nm_cat_grupo": {
+			      "Binding": {
+			        "ConceptualEntity": "public vw_programa_beneficio"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_vw_programa_beneficio": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio"
+			          }
+			        },
+			        "public_vw_programa_beneficio.nm_cat_grupo": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio.nm_cat_grupo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_vw_programa_beneficio"
+			            },
+			            "Object": {
+			              "Role": "public_vw_programa_beneficio.nm_cat_grupo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_vw_programa_beneficios_have_nm_cat_grupos"
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio_has_cd_defeito": {
+			      "Binding": {
+			        "ConceptualEntity": "public vw_programa_beneficio"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_vw_programa_beneficio": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio"
+			          }
+			        },
+			        "public_vw_programa_beneficio.cd_defeito": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio.cd_defeito"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_vw_programa_beneficio"
+			            },
+			            "Object": {
+			              "Role": "public_vw_programa_beneficio.cd_defeito"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_vw_programa_beneficios_have_cd_defeitos"
+			        }
+			      ]
+			    },
+			    "public_vw_programa_beneficio_has_diff_day": {
+			      "Binding": {
+			        "ConceptualEntity": "public vw_programa_beneficio"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_vw_programa_beneficio": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio"
+			          }
+			        },
+			        "public_vw_programa_beneficio.diff_day": {
+			          "Target": {
+			            "Entity": "public_vw_programa_beneficio.diff_day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_vw_programa_beneficio"
+			            },
+			            "Object": {
+			              "Role": "public_vw_programa_beneficio.diff_day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_vw_programa_beneficios_have_diff_days"
 			        }
 			      ]
 			    },
@@ -5185,39 +6785,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "public_vw_programa_beneficios_have_medida_atendimento_por_tecnico"
-			        }
-			      ]
-			    },
-			    "public_vw_programa_beneficio_has_intervalo_abertura_e_fechamento": {
-			      "Binding": {
-			        "ConceptualEntity": "public vw_programa_beneficio"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_vw_programa_beneficio": {
-			          "Target": {
-			            "Entity": "public_vw_programa_beneficio"
-			          }
-			        },
-			        "public_vw_programa_beneficio.intervalo_abertura_e_fechamento": {
-			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.intervalo_abertura_e_fechamento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_vw_programa_beneficio"
-			            },
-			            "Object": {
-			              "Role": "public_vw_programa_beneficio.intervalo_abertura_e_fechamento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_vw_programa_beneficios_have_intervalo_abertura_e_fechamentos"
 			        }
 			      ]
 			    },
@@ -5617,7 +7184,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "public_vw_programa_beneficio_has_lead_day": {
+			    "public_vw_programa_beneficio_has_lag_day": {
 			      "Binding": {
 			        "ConceptualEntity": "public vw_programa_beneficio"
 			      },
@@ -5628,9 +7195,9 @@ cultureInfo pt-BR
 			            "Entity": "public_vw_programa_beneficio"
 			          }
 			        },
-			        "public_vw_programa_beneficio.lead_day": {
+			        "public_vw_programa_beneficio.lag_day": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day"
+			            "Entity": "public_vw_programa_beneficio.lag_day"
 			          }
 			        }
 			      },
@@ -5641,12 +7208,12 @@ cultureInfo pt-BR
 			              "Role": "public_vw_programa_beneficio"
 			            },
 			            "Object": {
-			              "Role": "public_vw_programa_beneficio.lead_day"
+			              "Role": "public_vw_programa_beneficio.lag_day"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_vw_programa_beneficios_have_lead_days"
+			          "ID": "public_vw_programa_beneficios_have_lag_days"
 			        }
 			      ]
 			    },
@@ -6442,7 +8009,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "public_vw_programa_beneficio_is_led_on_lead_day": {
+			    "public_vw_programa_beneficio_is_lagged_on_lag_day": {
 			      "Binding": {
 			        "ConceptualEntity": "public vw_programa_beneficio"
 			      },
@@ -6453,15 +8020,15 @@ cultureInfo pt-BR
 			            "Entity": "public_vw_programa_beneficio"
 			          }
 			        },
-			        "public_vw_programa_beneficio.lead_day": {
+			        "public_vw_programa_beneficio.lag_day": {
 			          "Target": {
-			            "Entity": "public_vw_programa_beneficio.lead_day"
+			            "Entity": "public_vw_programa_beneficio.lag_day"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "When": {
-			          "Role": "public_vw_programa_beneficio.lead_day"
+			          "Role": "public_vw_programa_beneficio.lag_day"
 			        }
 			      },
 			      "Phrasings": [
@@ -6469,7 +8036,7 @@ cultureInfo pt-BR
 			          "Verb": {
 			            "Verbs": [
 			              {
-			                "lead": {
+			                "lag": {
 			                  "State": "Generated"
 			                }
 			              }
@@ -6480,205 +8047,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.9,
-			          "ID": "public_vw_programa_beneficios_are_led_on_lead_days"
-			        }
-			      ]
-			    },
-			    "filtro_calendario_date_ano_has_filtro_calendario_date_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "filtro_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "filtro_calendario.date.ano": {
-			          "Target": {
-			            "Entity": "filtro_calendario.date.ano"
-			          }
-			        },
-			        "filtro_calendario.date.trimestre": {
-			          "Target": {
-			            "Entity": "filtro_calendario.date.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "filtro_calendario.date.ano"
-			            },
-			            "Object": {
-			              "Role": "filtro_calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres4"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "filtro_calendario.date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "filtro_calendario.date.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos4"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "filtro_calendario.date.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "filtro_calendario.date.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos4"
-			        }
-			      ]
-			    },
-			    "filtro_calendario_date_trimestre_has_filtro_calendario_date_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "filtro_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "filtro_calendario.date.trimestre": {
-			          "Target": {
-			            "Entity": "filtro_calendario.date.trimestre"
-			          }
-			        },
-			        "filtro_calendario.date.mê": {
-			          "Target": {
-			            "Entity": "filtro_calendario.date.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "filtro_calendario.date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "filtro_calendario.date.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê4"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "filtro_calendario.date.mê"
-			            },
-			            "Object": {
-			              "Role": "filtro_calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres4"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "filtro_calendario.date.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "filtro_calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres4"
-			        }
-			      ]
-			    },
-			    "filtro_calendario_date_mê_has_filtro_calendario_date_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "filtro_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "filtro_calendario.date.mê": {
-			          "Target": {
-			            "Entity": "filtro_calendario.date.mê"
-			          }
-			        },
-			        "filtro_calendario.date.dia": {
-			          "Target": {
-			            "Entity": "filtro_calendario.date.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "filtro_calendario.date.mê"
-			            },
-			            "Object": {
-			              "Role": "filtro_calendario.date.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_dias4"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "filtro_calendario.date.dia"
-			            },
-			            "Object": {
-			              "Role": "filtro_calendario.date.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_have_mê4"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "filtro_calendario.date.dia"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "filtro_calendario.date.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê4"
+			          "ID": "public_vw_programa_beneficios_are_lagged_on_lag_days"
 			        }
 			      ]
 			    }

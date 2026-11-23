@@ -263,6 +263,38 @@ table 'public vw_programa_beneficio'
 
 		annotation SummarizationSetBy = Automatic
 
+	column nm_cat_grupo
+		dataType: string
+		lineageTag: 6a9ac003-fb76-4aae-98ad-2fb6775d2419
+		summarizeBy: none
+		sourceColumn: nm_cat_grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column gereg
+		dataType: string
+		lineageTag: f440b5ae-34c3-4396-859f-4d7fde761eb2
+		summarizeBy: none
+		sourceColumn: gereg
+
+		annotation SummarizationSetBy = Automatic
+
+	column super
+		dataType: string
+		lineageTag: e43b3d69-fd92-4de9-bfdc-e815093ecb8c
+		summarizeBy: none
+		sourceColumn: super
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_normalizado
+		dataType: string
+		lineageTag: 31787e9b-5bb4-47f3-8e2e-07d2299c797b
+		summarizeBy: none
+		sourceColumn: estado_normalizado
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'public vw_programa_beneficio' = m
 		mode: import
 		source =
@@ -302,11 +334,29 @@ table 'public vw_programa_beneficio'
 				        else if [sg_uf] = "TO" then "Tocantins"
 				        else null
 				),
-				    #"Valor Substituído" = Table.ReplaceValue(#"Personalização Adicionada","Concluído com Pendência","Pendência",Replacer.ReplaceText,{"nm_status_tarefa"})
+				    #"Valor Substituído" = Table.ReplaceValue(#"Personalização Adicionada","Concluído com Pendência","Pendência",Replacer.ReplaceText,{"nm_status_tarefa"}),
+				    #"Personalização Adicionada1" = Table.AddColumn(#"Valor Substituído", "estado_normalizado", each List.Accumulate(
+				    {
+				        {"á","a"},{"à","a"},{"ã","a"},{"â","a"},{"ä","a"},
+				        {"é","e"},{"è","e"},{"ê","e"},{"ë","e"},
+				        {"í","i"},{"ì","i"},{"î","i"},{"ï","i"},
+				        {"ó","o"},{"ò","o"},{"õ","o"},{"ô","o"},{"ö","o"},
+				        {"ú","u"},{"ù","u"},{"û","u"},{"ü","u"},
+				        {"ç","c"},
+				        {"Á","A"},{"À","A"},{"Ã","A"},{"Â","A"},{"Ä","A"},
+				        {"É","E"},{"È","E"},{"Ê","E"},{"Ë","E"},
+				        {"Í","I"},{"Ì","I"},{"Î","I"},{"Ï","I"},
+				        {"Ó","O"},{"Ò","O"},{"Õ","O"},{"Ô","O"},{"Ö","O"},
+				        {"Ú","U"},{"Ù","U"},{"Û","U"},{"Ü","U"},
+				        {"Ç","C"}
+				    },
+				    [estado],
+				    (resultado, atual) => Text.Replace(resultado, atual{0}, atual{1})
+				))
 				in
-				    #"Valor Substituído"
+				    #"Personalização Adicionada1"
 
 	annotation PBI_NavigationStepName = Navegação
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

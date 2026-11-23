@@ -4,10 +4,10 @@
   "position": {
     "x": 488.33108445315247,
     "y": 22.713073695495464,
-    "z": 7000,
+    "z": 5000,
     "height": 127.1932126947746,
     "width": 322.5256464760356,
-    "tabOrder": 5000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "textFilter25A4896A83E0487089E2B90C9AE57C8A",
@@ -36,43 +36,7 @@
     "objects": {
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "p",
-                    "Entity": "public vw_programa_beneficio",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "Contains": {
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "p"
-                              }
-                            },
-                            "Property": "nr_bem"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "'7417161480040'"
-                          }
-                        }
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "textBox": [

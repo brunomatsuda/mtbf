@@ -4,10 +4,10 @@
   "position": {
     "x": 1290.1025859041424,
     "y": 601.89645293062983,
-    "z": 11000,
+    "z": 10000,
     "height": 455,
     "width": 590,
-    "tabOrder": 11000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -44,13 +44,14 @@
                           "Entity": "public vw_programa_beneficio"
                         }
                       },
-                      "Property": "nr_incidente"
+                      "Property": "nr_bem"
                     }
                   },
-                  "Function": 2
+                  "Function": 5
                 }
               },
-              "queryRef": "Count(public vw_programa_beneficio.nr_incidente)"
+              "queryRef": "CountNonNull(public vw_programa_beneficio.nr_bem)",
+              "nativeQueryRef": "nr_bem"
             }
           ]
         }
@@ -67,15 +68,16 @@
                         "Entity": "public vw_programa_beneficio"
                       }
                     },
-                    "Property": "nr_incidente"
+                    "Property": "nr_bem"
                   }
                 },
-                "Function": 2
+                "Function": 5
               }
             },
             "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {

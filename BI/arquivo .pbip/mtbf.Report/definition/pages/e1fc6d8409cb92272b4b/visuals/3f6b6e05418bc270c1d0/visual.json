@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "3f6b6e05418bc270c1d0",
+  "position": {
+    "x": 978.93347627585445,
+    "y": 54.511376869189114,
+    "z": 2000,
+    "height": 1003.9178573408994,
+    "width": 894.89510360252132,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "boxPloty6C987A9E682A4A859272BFEC966AF372",
+    "query": {
+      "queryState": {
+        "category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "public vw_programa_beneficio"
+                    }
+                  },
+                  "Property": "nm_tecnico"
+                }
+              },
+              "queryRef": "public vw_programa_beneficio.nm_tecnico",
+              "nativeQueryRef": "nm_tecnico"
+            }
+          ]
+        },
+        "measure": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "public vw_programa_beneficio"
+                        }
+                      },
+                      "Property": "diff_days"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(public vw_programa_beneficio.diff_days)",
+              "nativeQueryRef": "Soma de diff_days"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "public vw_programa_beneficio"
+                      }
+                    },
+                    "Property": "diff_days"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -3,9 +3,9 @@
   "name": "35a5fc58004b4628ae22",
   "position": {
     "x": 1303.7304301214397,
-    "y": 701.83397719080983,
+    "y": 683.66351823441346,
     "z": 16001,
-    "height": 345.23872017153104,
+    "height": 379.30833071477423,
     "width": 556.47030553963884,
     "tabOrder": 16001
   },
@@ -23,11 +23,12 @@
                       "Entity": "public vw_programa_beneficio"
                     }
                   },
-                  "Property": "estado"
+                  "Property": "estado_normalizado"
                 }
               },
-              "queryRef": "public vw_programa_beneficio.estado",
-              "nativeQueryRef": "estado"
+              "queryRef": "public vw_programa_beneficio.estado_normalizado",
+              "nativeQueryRef": "Estado",
+              "displayName": "Estado"
             }
           ]
         },
@@ -41,11 +42,12 @@
                       "Entity": "public vw_programa_beneficio"
                     }
                   },
-                  "Property": "nm_cidade"
+                  "Property": "nm_cat_grupo"
                 }
               },
-              "queryRef": "public vw_programa_beneficio.nm_cidade",
-              "nativeQueryRef": "nm_cidade"
+              "queryRef": "public vw_programa_beneficio.nm_cat_grupo",
+              "nativeQueryRef": "Grupo CAT",
+              "displayName": "Grupo CAT"
             }
           ]
         }
@@ -216,14 +218,14 @@
             "showTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "''"
+                  "Value": "'CAT'"
                 }
               }
             }
@@ -237,6 +239,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "autoZoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
