@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "26745ad1c6b17bd657ba",
   "position": {
-    "x": 465.618010757657,
-    "y": 54.511376869189114,
+    "x": 474.70324023585516,
+    "y": 20.441766325945917,
     "z": 3000,
-    "height": 122,
-    "width": 322,
+    "height": 122.65059795567551,
+    "width": 381.57963808432379,
     "tabOrder": 3000
   },
   "visual": {
@@ -57,6 +57,47 @@
                 "Literal": {
                   "Value": "1D"
                 }
+              }
+            },
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "p",
+                    "Entity": "public vw_programa_beneficio",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "p"
+                                }
+                              },
+                              "Property": "nm_tecnico"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'ALEX SANDRO DE ALMEIDA RODRIGUES PINTO'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
               }
             }
           }

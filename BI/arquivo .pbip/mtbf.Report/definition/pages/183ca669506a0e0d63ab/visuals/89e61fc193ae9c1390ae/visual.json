@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "89e61fc193ae9c1390ae",
   "position": {
     "x": 1072.0570784273859,
@@ -10,7 +10,7 @@
     "tabOrder": 14000
   },
   "visual": {
-    "visualType": "filledMap",
+    "visualType": "azureMap",
     "query": {
       "queryState": {
         "Category": {
@@ -31,24 +31,6 @@
               "active": true
             }
           ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "public vw_programa_beneficio"
-                    }
-                  },
-                  "Property": "nm_cat_grupo"
-                }
-              },
-              "queryRef": "public vw_programa_beneficio.nm_cat_grupo",
-              "nativeQueryRef": "nm_cat_grupo"
-            }
-          ]
         }
       }
     },
@@ -62,37 +44,6 @@
                   "expr": {
                     "Literal": {
                       "Value": "'#174A6E'"
-                    }
-                  }
-                }
-              }
-            },
-            "fillRule": {
-              "linearGradient2": {
-                "min": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'minColor'"
-                      }
-                    }
-                  }
-                },
-                "max": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'maxColor'"
-                      }
-                    }
-                  }
-                },
-                "nullColoringStrategy": {
-                  "strategy": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'asZero'"
-                      }
                     }
                   }
                 }
@@ -197,14 +148,14 @@
             "centerLatitude": {
               "expr": {
                 "Literal": {
-                  "Value": "-14.386320351214223D"
+                  "Value": "-18.63291873532542D"
                 }
               }
             },
             "centerLongitude": {
               "expr": {
                 "Literal": {
-                  "Value": "-51.33957290649414D"
+                  "Value": "-45.450890000000015D"
                 }
               }
             },
@@ -212,6 +163,48 @@
               "expr": {
                 "Literal": {
                   "Value": "'en-US'"
+                }
+              }
+            },
+            "defaultStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'grayscale_light'"
+                }
+              }
+            },
+            "showLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showStylePicker": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showNavigationControls": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showSelectionControl": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "zoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "5.5D"
                 }
               }
             }
@@ -231,20 +224,59 @@
           }
         }
       ],
-      "mapStyles": [
+      "bubbleLayer": [
         {
           "properties": {
-            "mapTheme": {
-              "expr": {
-                "Literal": {
-                  "Value": "'aerial'"
-                }
-              }
-            },
-            "showLabels": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "filledMap": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "mapTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "40L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "referenceLayer": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "tileLayer": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
