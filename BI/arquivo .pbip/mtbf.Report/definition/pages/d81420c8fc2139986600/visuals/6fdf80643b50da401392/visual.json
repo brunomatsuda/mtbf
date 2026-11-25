@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "6fdf80643b50da401392",
   "position": {
-    "x": 1238.4676068834628,
-    "y": 24.98438106504501,
-    "z": 16003,
+    "x": 1391.0667362895335,
+    "y": 32,
+    "z": 15000,
     "height": 122.65059795567551,
-    "width": 270.28557697639604,
-    "tabOrder": 16003
+    "width": 180,
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "public vw_programa_beneficio"
                     }
                   },
-                  "Property": "gereg"
+                  "Property": "nm_cat_grupo"
                 }
               },
-              "queryRef": "public vw_programa_beneficio.gereg",
-              "nativeQueryRef": "gereg",
+              "queryRef": "public vw_programa_beneficio.nm_cat_grupo",
+              "nativeQueryRef": "nm_cat_grupo",
               "active": true
             }
           ]
@@ -166,7 +166,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Gereg'"
+                  "Value": "'CAT'"
                 }
               }
             },

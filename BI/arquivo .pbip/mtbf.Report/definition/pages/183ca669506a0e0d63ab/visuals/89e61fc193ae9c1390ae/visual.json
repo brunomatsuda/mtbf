@@ -10,7 +10,7 @@
     "tabOrder": 14000
   },
   "visual": {
-    "visualType": "shapeMap",
+    "visualType": "filledMap",
     "query": {
       "queryState": {
         "Category": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "public vw_programa_beneficio.estado_normalizado",
-              "nativeQueryRef": "estado_normalizado"
+              "nativeQueryRef": "estado_normalizado",
+              "active": true
             }
           ]
         },
@@ -41,64 +42,17 @@
                       "Entity": "public vw_programa_beneficio"
                     }
                   },
-                  "Property": "estado_normalizado"
+                  "Property": "nm_cat_grupo"
                 }
               },
-              "queryRef": "public vw_programa_beneficio.estado_normalizado",
-              "nativeQueryRef": "estado_normalizado"
+              "queryRef": "public vw_programa_beneficio.nm_cat_grupo",
+              "nativeQueryRef": "nm_cat_grupo"
             }
           ]
         }
       }
     },
     "objects": {
-      "shape": [
-        {
-          "properties": {
-            "datasourceType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'file_upload'"
-                }
-              }
-            },
-            "map": {
-              "geoJson": {
-                "type": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'shared'"
-                    }
-                  }
-                },
-                "name": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'brazil.states.topo'"
-                    }
-                  }
-                },
-                "content": {
-                  "expr": {
-                    "ResourcePackageItem": {
-                      "PackageName": "ShapeMap",
-                      "PackageType": 2,
-                      "ItemName": "brazil.states.topo"
-                    }
-                  }
-                }
-              }
-            },
-            "projectionEnum": {
-              "expr": {
-                "Literal": {
-                  "Value": "'orthographic'"
-                }
-              }
-            }
-          }
-        }
-      ],
       "dataPoint": [
         {
           "properties": {
@@ -108,6 +62,37 @@
                   "expr": {
                     "Literal": {
                       "Value": "'#174A6E'"
+                    }
+                  }
+                }
+              }
+            },
+            "fillRule": {
+              "linearGradient2": {
+                "min": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'minColor'"
+                      }
+                    }
+                  }
+                },
+                "max": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'maxColor'"
+                      }
+                    }
+                  }
+                },
+                "nullColoringStrategy": {
+                  "strategy": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'asZero'"
+                      }
                     }
                   }
                 }
@@ -137,30 +122,6 @@
                 }
               }
             ]
-          }
-        }
-      ],
-      "defaultColors": [
-        {
-          "properties": {
-            "borderThickness": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
-                }
-              }
-            },
-            "borderColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#ECFDFF'"
-                    }
-                  }
-                }
-              }
-            }
           }
         }
       ],
@@ -230,24 +191,57 @@
           }
         }
       ],
-      "zoom": [
+      "mapControls": [
         {
           "properties": {
-            "selectionZoom": {
+            "centerLatitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "-14.386320351214223D"
+                }
+              }
+            },
+            "centerLongitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "-51.33957290649414D"
+                }
+              }
+            },
+            "geocodingCulture": {
+              "expr": {
+                "Literal": {
+                  "Value": "'en-US'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
-            },
-            "autoZoom": {
+            }
+          }
+        }
+      ],
+      "mapStyles": [
+        {
+          "properties": {
+            "mapTheme": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'aerial'"
                 }
               }
             },
-            "manualZoom": {
+            "showLabels": {
               "expr": {
                 "Literal": {
                   "Value": "false"

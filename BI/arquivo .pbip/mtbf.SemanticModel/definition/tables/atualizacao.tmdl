@@ -3,7 +3,7 @@ table atualizacao
 
 	column atualizacao
 		dataType: dateTime
-		formatString: General Date
+		formatString: Short Date
 		lineageTag: 2180a2ac-b79f-4fb3-9e50-b0e0708a7296
 		summarizeBy: none
 		sourceColumn: atualizacao

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "31ec37eaaa56c3c88df1",
   "position": {
-    "x": 319.26995804144104,
-    "y": 24.98438106504501,
-    "z": 5000,
+    "x": 229.40204432450417,
+    "y": 31.79830317369365,
+    "z": 4000,
     "height": 122.65059795567551,
-    "width": 270.28557697639604,
-    "tabOrder": 5000
+    "width": 204.41766325945918,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "textFilter25A4896A83E0487089E2B90C9AE57C8A",
@@ -36,7 +36,43 @@
     "objects": {
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "p",
+                    "Entity": "public vw_programa_beneficio",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Contains": {
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "p"
+                              }
+                            },
+                            "Property": "nr_bem"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'7417161483847'"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       ],
       "textBox": [

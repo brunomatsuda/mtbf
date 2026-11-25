@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "35a5fc58004b4628ae22",
   "position": {
     "x": 1303.7304301214397,
     "y": 683.66351823441346,
-    "z": 16001,
+    "z": 13000,
     "height": 379.30833071477423,
     "width": 556.47030553963884,
-    "tabOrder": 16001
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "shapeMap",
@@ -29,25 +29,6 @@
               "queryRef": "public vw_programa_beneficio.estado_normalizado",
               "nativeQueryRef": "Estado",
               "displayName": "Estado"
-            }
-          ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "public vw_programa_beneficio"
-                    }
-                  },
-                  "Property": "nm_cat_grupo"
-                }
-              },
-              "queryRef": "public vw_programa_beneficio.nm_cat_grupo",
-              "nativeQueryRef": "Grupo CAT",
-              "displayName": "Grupo CAT"
             }
           ]
         }
